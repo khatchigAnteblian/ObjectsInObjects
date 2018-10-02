@@ -15,7 +15,13 @@ public class ObjectsInObjects {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Jam jam1 = new Jam("Apple Jam", "06/12/01",25);
+        
+        System.out.println(jam1.isEmpty());
+        
+        jam1.spreadOnToast(30);
+        
+        jam1.printInfo();
     }
     
 }
