@@ -11,4 +11,12 @@ package objectsinobjects;
  */
 public class Pantry {
     
+    private final Jam[] jars = new Jam[3];
+    
+    public Pantry(Jam jar1, Jam jar2, Jam jar3) {
+        jars[0] = jar1;
+        jars[1] = jar2;
+        jars[2] = jar3;
+    }
+    
 }
