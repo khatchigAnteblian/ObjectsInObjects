@@ -11,4 +11,22 @@ package objectsinobjects;
  */
 public class Jam {
     
+    String content;
+    String date;
+    int size;
+    
+    public Jam(String c, String d, int s){
+        content = c;
+        date = d;
+        size = s;
+    }
+    
+    public boolean isEmpty(){
+        if(this.size == 0){
+            return true;
+        }
+        return false;
+    }
+    
+    
 }
