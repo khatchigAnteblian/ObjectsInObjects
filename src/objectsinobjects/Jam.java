@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-//package objectsinobjects;
+package objectsinobjects;
 
 /**
  *
@@ -29,7 +29,9 @@ public class Jam {
     }
 
     public void spreadOnToast(int i) {
-        if (i < size) {
+        if (size == 0) {
+            System.out.println("No jam in the jar!!");
+        } else if (i < size) {
             size = size - i;
             System.out.println("Spreading " + i + " fluid ounces of " + this.content);
         } else {
