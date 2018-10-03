@@ -3,25 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package objectsinobjects;
+//package objectsinobjects;
 
 /**
  *
  * @author 345983704
  */
+import java.util.Scanner;
 public class ObjectsInObjects {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Jam jam1 = new Jam("Apple Jam", "06/12/01",25);
-        
-        System.out.println(jam1.isEmpty());
-        
-        jam1.spreadOnToast(30);
-        
-        jam1.printInfo();
+        // Setting up jams
+        Jam jam1 = new Jam("Apple", "06/12/01",25);
+        Jam jam2 = new Jam("Banana", "25/12/01", 30);
+        Jam jam3 = new Jam("Pineapple", "12/04/13", 40);
+
+        // Checking whether everything is working correctly
+        Pantry pantry = new Pantry(jam1, jam2, jam3);
+        pantry.printContent();
+        pantry.spreadJam(2, 15);
+        pantry.printContent();
     }
     
 }
