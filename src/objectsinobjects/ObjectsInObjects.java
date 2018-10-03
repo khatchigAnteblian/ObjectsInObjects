@@ -20,12 +20,33 @@ public class ObjectsInObjects {
         Jam jam1 = new Jam("Apple", "06/12/01",25);
         Jam jam2 = new Jam("Banana", "25/12/01", 30);
         Jam jam3 = new Jam("Pineapple", "12/04/13", 40);
-
-        // Checking whether everything is working correctly
         Pantry pantry = new Pantry(jam1, jam2, jam3);
-        pantry.printContent();
-        pantry.spreadJam(2, 15);
-        pantry.printContent();
+
+        //Setting up scanner and variables
+        Scanner sc = new Scanner(System.in);
+        int jarNum, amount;
+
+        // Welcome user
+        System.out.println("Welcome to JAVA Pantry!\n");
+
+        // Start infinite loop
+        while (true) {
+            // Print content of jars, then ask user for input
+            System.out.println("The jams are:\n");
+            pantry.printContent();
+            System.out.print("Enter selection (1, 2, 3): ");
+            jarNum = sc.nextInt();
+
+            // Stop when user enters -1
+            if (jarNum == -1) { break; }
+
+            System.out.print("Enter amount: ");
+            amount = sc.nextInt();
+
+            pantry.spreadJam(jarNum, amount);
+        }
+
+        System.out.println("Goodbye!");
     }
     
 }
