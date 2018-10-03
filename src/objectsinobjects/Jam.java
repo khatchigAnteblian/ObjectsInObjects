@@ -40,7 +40,7 @@ public class Jam {
         }
     }
 
-    public void printInfo(){
-        System.out.println(this.content+"\t"+this.date+"\t"+this.size+" fl. oz.");
+    public String toString(){
+        return this.content+"\t"+this.date+"\t"+this.size+" fl. oz.\n";
     }
 }

@@ -32,8 +32,7 @@ public class Pantry {
     public void printContent() {
         // Loop through jars and call the printInfo method on each one
         for (int i=0; i<3; i++) {
-            System.out.print("Jam " + (i + 1) + ": ");
-            jars[i].printInfo();
+            System.out.print("Jam " + (i + 1) + ": " + jars[i].toString());
         }
     }
 
